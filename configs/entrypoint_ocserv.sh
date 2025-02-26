@@ -63,7 +63,6 @@ EOT
     mkdir /etc/ocserv/defaults
     >/etc/ocserv/defaults/group.conf
     mkdir /etc/ocserv/groups
-    mkdir /etc/ocserv/certs
 fi
 
 echo -e "\e[0;32m"Adding iptables rules."\e[0m"
