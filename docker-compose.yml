@@ -16,10 +16,9 @@ services:
     volumes:
       - ./volumes/ocserv:/etc/ocserv
       - ./volumes/db:/app/db
-      - shared-ssl:/etc/ocserv/certs
+      - /etc/letsencrypt/live/ocserv.sanctuaryimmersive.com:/etc/ocserv/certs
     ports:
-      - ${PORT:-20443}:443/tcp
-      - ${PORT:-20443}:443/udp
+      - 443:443/tcp
     env_file:
       - ./prod.env
     networks:
@@ -33,12 +32,9 @@ services:
       context: .
       dockerfile: Dockerfile.Front
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
     depends_on:
       - ocserv_and_backend
-    volumes:
-      - shared-ssl:/etc/nginx/certs
     env_file:
       - ./prod.env
     networks:
