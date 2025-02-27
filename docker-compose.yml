@@ -13,7 +13,6 @@ services:
     volumes:
       - ./volumes/ocserv:/etc/ocserv
       - ./volumes/db:/app/db
-      - /etc/letsencrypt/live/oc15.sanctuaryimmersive.com:/etc/ocserv/certs
     ports:
       - 443:443/tcp
     # env_file:
