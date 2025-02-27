@@ -94,4 +94,5 @@ EOT
 
 python3 /app/manage.py migrate
 
+sleep 10
 exec "$@"
