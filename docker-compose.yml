@@ -1,6 +1,3 @@
-volumes:
-  shared-ssl:
-
 networks:
   shared-app:
 

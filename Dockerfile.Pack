@@ -33,7 +33,7 @@ COPY configs/entrypoint_ocserv.sh /entrypoint.sh
 
 RUN chmod +x /services.sh /entrypoint.sh && echo net.ipv4.ip_forward=1 | tee -a /etc/sysctl.conf && sysctl -p 
 
-EXPOSE 443/tcp 443/udp
+EXPOSE 443/tcp
 VOLUME ["/etc/ocserv", "/app/db"]
 
 ENTRYPOINT ["/entrypoint.sh"]
