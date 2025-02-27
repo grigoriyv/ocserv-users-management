@@ -37,4 +37,5 @@ EXPOSE 443/tcp 443/udp
 VOLUME ["/etc/ocserv", "/app/db"]
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/services.sh"]
+# CMD ["/services.sh"]
+CMD ["sleep 1200"]
