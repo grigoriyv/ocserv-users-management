@@ -38,4 +38,4 @@ VOLUME ["/etc/ocserv", "/app/db"]
 
 # ENTRYPOINT ["/entrypoint.sh"]
 # CMD ["/services.sh"]
-CMD [sleep 1h]
+CMD ["sleep", "1h"]
