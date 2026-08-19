@@ -10,3 +10,4 @@ typing_extensions==4.6.2
 requests==2.31
 tzdata
 behave==1.2.6
+setuptools>=68,<81
