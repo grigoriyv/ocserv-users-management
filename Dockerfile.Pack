@@ -20,7 +20,8 @@ WORKDIR /app
 COPY back-end/requirements.txt .
 
 RUN python3 -m venv /opt/venv && \
-    /opt/venv/bin/pip install --upgrade pip setuptools && \
+    /opt/venv/bin/pip install --upgrade pip && \
+    /opt/venv/bin/pip install 'setuptools>=68,<81' && \
     /opt/venv/bin/pip install -r requirements.txt
     
 ENV PATH="/opt/venv/bin:$PATH"
